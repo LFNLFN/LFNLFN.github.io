@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>LFN-BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="To Improve Myself">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LFN-BLOG">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="LFN-BLOG">
+<meta property="og:description" content="To Improve Myself">
+<meta property="og:locale" content="Chinese & English">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LFN-BLOG">
+<meta name="twitter:description" content="To Improve Myself">
+  
+    <link rel="alternate" href="/atom.xml" title="LFN-BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LFN-BLOG</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-浏览器缓存" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/21/浏览器缓存/" class="article-date">
+  <time datetime="2018-07-21T13:21:18.133Z" itemprop="datePublished">2018-07-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: 浏览器缓存<br>date: 2018-07-21 21:21:18<br>tags: Web Cache  </p>
+<hr>
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p> 之前有不少行业前辈说过，写博客对自己有很好的帮助，所以就想试一试，用自己的经历去验证这个说法。<br>其实很久之前JZ已经帮我用Hexo搭建了一个博客，还布置到了github上。无奈当时实在难以理解博客框架的使用，如今虽然想直接复用，但是感觉错误风险不好控制，还是重新自己来过吧。   </p>
+<h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>来到HB工作后，在测试时总会遇到需要‘清缓存’的时候。久而久之，觉得有些烦人，虽然JIA哥叫我不需要处理这个问题，后端自有应对思路，但还是没忍住上网查了一下，得到一些思路指示，引用如下。   </p>
+<ol>
+<li><p><code>&lt;script type=&quot;text/javascript&quot; src=&quot;/js/yourjs.js?rd=&lt;%=Math.random()%&gt;&quot;&gt;&lt;/script&gt;</code>  </p>
+<p> -这种方法使用了<em>jsp</em>，我暂时还没有打算深入了解，以上语句的意思很简单，就是在引用地址后加入一个随机数，强制引用新文件。</p>
+</li>
+</ol>
+<ol start="2">
+<li><p>‘造成缓存问题的原因要么是服务器没配置好，给不该缓存的页面加了缓存的头；要么就是前端项目构建时没有给资源文件加版本号或 hash。’   </p>
+<p>-印象中这个地方用了很多命令行操作，记得以前看招聘需求时很多公司对Linux系统有要求，如今回想，大概就是对命令行的操作吧。  </p>
+</li>
+</ol>
+<ol start="3">
+<li><p>对于ajax的请求，加入全局配置<code>$.ajaxSetup({cache:false});</code>即可  </p>
+<p>-这个方案当然我当时最喜欢的，而且HB的第一个项目就是用JQuery做的。 </p>
+</li>
+</ol>
+<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>   博客这东西，我觉得是“伸手党”的福利，当然伸手党不一定是懒人，还有可能是一些像我这样的小白，技术积累没能到达门槛水平，只能先学会应用，提升即战力。</p>
+<p>   既然今晚写了第一篇，开了个头，感觉往后写博客应该会容易一些，哈哈。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/21/浏览器缓存/" data-id="ckc1n6v800001ccfxeyqd3bgg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/21/hello-world/" class="article-date">
+  <time datetime="2018-07-21T12:16:28.826Z" itemprop="datePublished">2018-07-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/21/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/21/hello-world/" data-id="ckc1n6v7s0000ccfxxxaf5zmr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/21/浏览器缓存/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/21/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 LFN<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
